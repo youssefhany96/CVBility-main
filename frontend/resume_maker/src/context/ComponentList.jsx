@@ -293,7 +293,7 @@ export default function ComponentList(props) {
         }
         return;
       }
-     
+
       if (id === "technical") {
         if (TechnicalCompArray.length !== 0) {
           setTechnicalCompArray(
@@ -469,7 +469,7 @@ export default function ComponentList(props) {
           );
           const x = document.getElementsByClassName(id);
           x[0].classList.remove("outline-dashed", "outline-primary2");
-            x[1].classList.remove("outline-dashed", "outline-primary2");
+          x[1].classList.remove("outline-dashed", "outline-primary2");
           document.getElementById(`${id}menu`).classList.add("hidden");
           removeComponent(WorkData, SelectedId, setWorkData);
         } else {
@@ -522,10 +522,9 @@ export default function ComponentList(props) {
         return;
       }
       if (id === "language") {
-        console.log(LanProfCompArray[0])
         if (LanProfCompArray.length !== 0) {
           setLanProfCompArray(
-            LanProfCompArray.filter((el) => el.props.id != SelectedId),
+            LanProfCompArray.filter((el) => el.props.id != SelectedId)
           );
           const x = document.getElementsByClassName(id);
           x[0].classList.remove("outline-dashed", "outline-primary2");
@@ -1081,7 +1080,7 @@ export default function ComponentList(props) {
       );
     }
     if (id === "education") {
-      console.log('EDUCATION::::::::');
+      console.log("EDUCATION::::::::");
       addComponent(
         EducationData,
         EducationCompArray,
@@ -1201,16 +1200,17 @@ export default function ComponentList(props) {
   };
 
   const addComponent = (Data, CompArray, Component, setCompArray) => {
-    console.log('Dataaaaa: =========', Data);
+    console.log("Dataaaaa: =========", Data);
     const maxId = Math.max(...Data.map((object) => object.id));
-    console.log('maxId: ', maxId);
+    console.log("maxId: ", maxId);
     const selectedObject = Data.filter((object) => object.id == maxId);
     const id = Data.filter((object) => object.id == +SelectedId + 1);
-    console.log('id: ', id);
-    const lastData = Data[Data.length-1]
-    console.log('lastData: ', lastData);
+    // console.log("id: ", id);
+    const lastData = Data[Data.length - 1];
+    console.log("lastData: ", lastData);
     if (
-      lastData.title || lastData.title2
+      (lastData && (lastData.title || lastData.title2)) ||
+      Data.length == 0
       // Data.length == 1 ||
       // (selectedObject && (selectedObject[0].title || selectedObject[0].title2))
     ) {
@@ -1229,7 +1229,8 @@ export default function ComponentList(props) {
             id={String(+SelectedId + 1 + Math.random())}
           />
         );
-        console.log('newArray:Dataaa ', newArray);
+        console.log("newArray:Dataaa ", newArray);
+
         return newArray;
       });
     }
