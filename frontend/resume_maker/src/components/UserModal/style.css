@@ -1,0 +1,150 @@
+.check-box{
+    width: 20px;
+    height: 20px;
+}
+
+.Account-button{
+    color: black;
+}
+
+#inputID::placeholder {
+    color: gray;
+    opacity: 1;
+}
+
+#Account{
+    display: flex;
+    align-items: center;
+    
+}
+
+.saveButton{
+    display: flex;
+    padding: 1rem;
+    gap: 15px;
+    justify-content: end;
+}
+
+.discard-text{
+    color: red;
+    margin: 0 1px;
+    
+}
+.discard-text:hover{
+  outline:red solid 1px;
+
+}
+
+
+
+.main-container{
+    display: flex;
+    align-items: center;
+}
+
+.InputTitle{
+   font-size: 14px;
+   color: black;
+   font-weight: 600;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.editInput{
+    margin-left: 10px;
+    display: flex;
+    height: 50px;
+    touch-action: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 15rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 5px;
+    padding-left: 15px;
+}
+#inputID:focus + .editInput {
+  outline: 2px solid rgba(0, 195, 255, 0.4) !important;
+  border
+  : 1px solid rgba(0, 195, 255, 0.4) !important;
+}
+.editInput:active,.editSelect:active  {
+  outline: 2px solid rgba(0, 195, 255, 0.4) !important;
+  border: 1px solid rgba(0, 195, 255, 0.4) !important;
+}
+.editInput::selection {
+  outline: 2px solid rgba(0, 195, 255, 0.4) !important;
+  border: 1px solid rgba(0, 195, 255, 0.4) !important;
+}
+
+.select-border:active {
+ 
+  border-right: 1px solid rgba(0, 195, 255, 0.4) !important;
+  border-left: 1px solid rgba(0, 195, 255, 0.4) !important;
+  border-bottom: 1px solid rgba(0, 195, 255, 0.4) !important;
+}
+
+
+#inputID::placeholder {
+  color: gray;
+  opacity: 1;
+}
+.editSelect{
+    display: flex;
+    z-index: 5;
+    height: 50px;
+    touch-action: none;
+    flex-direction: row;
+    justify-content: center;
+    width: 10rem;
+    height: 3.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 5px;
+    padding-left: 15px;
+    
+}
+.selec-border{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
+  
+  .scrollbar::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #FFF;
+  }
+  
+  .scrollbar::-webkit-scrollbar-track-piece {
+    /* styles here */
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #888;
+  }
+  
+  .scrollbar::-webkit-scrollbar-corner {
+    /* styles here */
+  }
+  
+  .scrollbar::-webkit-resizer {
+    /* styles here */
+  }
+
+
+
+
+
+
+
+
